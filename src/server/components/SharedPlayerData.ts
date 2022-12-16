@@ -22,20 +22,7 @@ interface ATTRIBUTES {
 }
 
 const profileTemplate = {
-	level: 1,
-	exp: 200,
-	class: "Paladin",
-	class_tag: "CLASS_PALADIN",
-	Gold: 0,
-	Inventory: new Map(),
-	Equips: {
-		Head: new Map(),
-		Top: new Map(),
-		Bottom: new Map(),
-		Main: new Map(),
-		Off: new Map(),
-	},
-	LogInTimes: 0,
+
 };
 
 const ProfileStore = ProfileService.GetProfileStore(`PlayerData_${Version.version}`, profileTemplate);
@@ -54,19 +41,6 @@ export class SharedPlayerData extends BaseComponent<ATTRIBUTES, PLAYER_INSTANCE>
 		Player,
 		Profile<
 			{
-				level: number;
-				exp: number;
-				class: string;
-				class_tag: string;
-				Gold: number;
-				Inventory: Map<unknown, unknown>;
-				Equips: {
-					Head: Map<unknown, unknown>;
-					Top: Map<unknown, unknown>;
-					Bottom: Map<unknown, unknown>;
-					Main: Map<unknown, unknown>;
-					Off: Map<unknown, unknown>;
-				};
 				LogInTimes: number;
 			},
 			unknown
